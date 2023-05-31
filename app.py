@@ -22,7 +22,7 @@ def get_ip_addr_info(ipv4_addr):
 							headers=h, 
 							params=p)
 	data = response.json()
-	message = "This domain contains \n"
+	message = "This IP address contains \n"
 	for item in data["sensors"]:
 		message += "- "+ item["description"] +"\n"
 	print(message)
